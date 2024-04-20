@@ -5,6 +5,34 @@ pip install -r requirements.txt
 python detect.py --source ./data/images/ --weights weights/yolov5s.pt --conf 0.4
 
 
+conf 指的是置信度 > 0.4才被采纳
+
+
+可以通过改变 权重文件 变更精度；例如5x 可以识别比5s更多的内容，例如 tie等
+
+
+种类数量是有限度的；
+
+
+数据集转换：
+XML坐标格式转换成yolo坐标格式{
+    通过已存在的数据，转换为框架可识别
+    格式是，(x,y)是中心，(w,h)宽高的 一个元组
+}
+
+分类格式化
+{
+    标记文件格式转换
+}
+
+图片对应关系{
+    图片id 和 标签的关系
+}
+
+
+
+
+
 
 
 
